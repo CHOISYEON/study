@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!--강사료 정산-->
+<mapper namespace="com.example.cafe.infra.CafeMapper">
+    <select id="selectMenu" resultType="com.example.cafe.domain.dto.MenuDto">
+        SELECT NAME, PRICE FROM MENU
+    </select>
+    
+    <insert id="insertMenu" parameterType="com.example.cafe.domain.dto.MenuDto">
+		INSERT INTO MENU (NUM, NAME, PRICE) VALUES (#{num}, #{name}, #{price})
+    </insert>
+    
+    <insert id="orderMenu" parameterType="com.example.cafe.domain.dto.MenuDto">
+		INSERT INTO CAFE_ORDER (NUM, ORDER_DATE, ORDER_TIME) VALUES (#{num}, TO_CHAR(SYSDATE, 'YYYYMMDD'), TO_CHAR(SYSDATE, 'HH24MISS'))
+    </insert>
+</mapper>
