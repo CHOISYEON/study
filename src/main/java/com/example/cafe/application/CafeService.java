@@ -8,9 +8,6 @@ import com.example.cafe.domain.CafeManager;
 import com.example.cafe.domain.dto.MenuDto;
 import com.example.cafe.ui.dto.CafeReqDto;
 
-/**
- * 강사 정보
- */
 @Service
 public class CafeService {
 

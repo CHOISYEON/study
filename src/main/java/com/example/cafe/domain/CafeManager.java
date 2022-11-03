@@ -18,22 +18,22 @@ public class CafeManager {
 	}
 
 	public String insertMenu(MenuDto menu) throws Exception {
-		String result = "ë©”ë‰´ ë“±ë¡ì— ì‹¤íŒ¨í–ˆìŠµë‹ˆë‹¤.";
+		String result = "¸Ş´º µî·Ï¿¡ ½ÇÆĞÇß½À´Ï´Ù.";
 		
 		int insCnt = cafeMapper.insertMenu(menu);
 		if(insCnt > 0) {
-			result = "ë©”ë‰´ ë“±ë¡ì— ì„±ê³µí–ˆìŠµë‹ˆë‹¤.";
+			result = "¸Ş´º µî·Ï¿¡ ¼º°øÇß½À´Ï´Ù.";
 		}
 		
 		return result;
 	}
 	
 	public String orderMenu(MenuDto menu) throws Exception {
-		String result = "ìŒë£Œ ì£¼ë¬¸ì— ì‹¤íŒ¨í–ˆìŠµë‹ˆë‹¤.";
+		String result = "À½·á ÁÖ¹®¿¡ ½ÇÆĞÇß½À´Ï´Ù.";
 		
 		int insCnt = cafeMapper.orderMenu(menu);
 		if(insCnt > 0) {
-			result = "ìŒë£Œ ì£¼ë¬¸ì— ì„±ê³µí–ˆìŠµë‹ˆë‹¤.";
+			result = "À½·á ÁÖ¹®¿¡ ¼º°øÇß½À´Ï´Ù.";
 		}
 		
 		return result;
