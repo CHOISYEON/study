@@ -14,6 +14,6 @@
     </insert>
     
     <insert id="orderMenu" parameterType="com.example.cafe.domain.dto.MenuDto">
-		INSERT INTO CAFE_ORDER (NUM, ORDER_DATE, ORDER_TIME) VALUES (#{num}, TO_CHAR(SYSDATE, 'YYYYMMDD'), TO_CHAR(SYSDATE, 'HH24MISS'))
+		INSERT INTO CAFE_ORDER (NUM, ORDER_DATE, ORDER_TIME) VALUES (#{num}, TO_CHAR(NOW(), 'YYYYMMDD'), TO_CHAR(NOW(), 'HH24MISS'))
     </insert>
 </mapper>
